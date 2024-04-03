@@ -25,7 +25,3 @@ TEST(SpeedingFineTest, MotorcycleSpeedingFines) {
     EXPECT_EQ(speeding_fine(2, 70), "Khong bi phat");
 }
 
-//int main(int argc, char** argv) {
-//    ::testing::InitGoogleTest(&argc, argv);
-//    return RUN_ALL_TESTS();
-//}

@@ -7,7 +7,7 @@ using namespace std;
 
 const float max_speed = 70.0;
 
-string speeding_fine (int vehicle, float speed) {
+string speeding_fine(int vehicle, float speed) {
     string fine = "";
     float tmp = speed - max_speed;
     if (vehicle == 1) { // Ô tô
@@ -48,11 +48,12 @@ string speeding_fine (int vehicle, float speed) {
 
     return fine;
 }
-
-int main() {
+int main(int argc, char** argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
     int vehicle;
     float speed;
-
+    
     // Nhập vào loại phương tiện và tốc độ
     cout << "Nhap vao loai phuong tien (1 - o to, 2 - xe may): ";
     cin >> vehicle;
@@ -67,5 +68,7 @@ int main() {
         }
     }
     cout << speeding_fine(vehicle, speed);
+
     return 0;
 }
+
